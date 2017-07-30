@@ -9,6 +9,7 @@ import (
 func main() {
 	fmt.Println("hello from main")
 	enterprise.Add(1, 2)
+	getFuncs()
 }
 
 //Answer to life is the number 42.
