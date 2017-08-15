@@ -2,7 +2,6 @@ package enterprise
 
 import "errors"
 import "math"
-import "strconv"
 
 // Add Two numbers.
 func Add(a int, b int) (c int) {
@@ -13,7 +12,17 @@ func Add(a int, b int) (c int) {
 // PiOverFour returns pi over 4 in binary
 func PiOverFour() (s string) {
 	piOverFour := math.Pi / 4
-	s = strconv.FormatFloat(piOverFour, 'f', 2, 64)
+	s = ""
+	x := piOverFour
+	for index := 0; index < 10; index++ {
+		x = piOverFour * 2
+		if x > 1 {
+			s = s + "1"
+		} else {
+			s = s + "0"
+		}
+	}
+	//s = strconv.FormatFloat(piOverFour, 'f', 2, 64)
 	return
 }
 
