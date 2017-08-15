@@ -66,3 +66,19 @@ func Test_add(t *testing.T) {
 		})
 	}
 }
+
+func TestPiOverFour(t *testing.T) {
+	tests := []struct {
+		name  string
+		wantS string
+	}{
+		{name: "yo", wantS: "12321"},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if gotS := PiOverFour(); gotS != tt.wantS {
+				t.Errorf("PiOverFour() = %v, want %v", gotS, tt.wantS)
+			}
+		})
+	}
+}
