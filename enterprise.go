@@ -18,6 +18,7 @@ func PiOverFour() (s string) {
 		x = piOverFour * 2
 		if x > 1 {
 			s = s + "1"
+			x = x - 1
 		} else {
 			s = s + "0"
 		}
