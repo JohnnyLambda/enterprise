@@ -11,19 +11,28 @@ func Add(a int, b int) (c int) {
 
 // PiOverFour returns pi over 4 in binary
 func PiOverFour() (s string) {
-	piOverFour := math.Pi / 4
+
+	return RatioToBinary(math.Pi/4, 10)
+}
+
+// RatioToBinary converts a ratio from 0 to 1 to binary
+func RatioToBinary(ratio float64, length int) (s string) {
+
 	s = ""
-	x := piOverFour
-	for index := 0; index < 10; index++ {
-		x = piOverFour * 2
-		if x > 1 {
+	x := ratio
+	for index := 0; index < length; index++ {
+
+		if x > .5 {
 			s = s + "1"
-			x = x - 1
+			x = x - .5
+			x = x * 2
+
 		} else {
 			s = s + "0"
+			x = x * 2
 		}
 	}
-	//s = strconv.FormatFloat(piOverFour, 'f', 2, 64)
+
 	return
 }
 

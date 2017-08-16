@@ -72,7 +72,7 @@ func TestPiOverFour(t *testing.T) {
 		name  string
 		wantS string
 	}{
-		{name: "yo", wantS: "12321"},
+		{name: "pi over 4", wantS: "1100100100"},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
